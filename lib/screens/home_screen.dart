@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Container(
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -98,6 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     IconButton(
                         onPressed: () {
+                          Future.delayed(const Duration(milliseconds: 100));
                           Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -112,12 +113,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              Expanded(
-                  child: GridView.builder(
+              GridView.builder(
+                shrinkWrap: true,
                 padding: const EdgeInsets.all(25),
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    childAspectRatio: 1 / 1.3, crossAxisCount: 2),
+                    childAspectRatio: 1 / 1.25, crossAxisCount: 2),
                 itemCount: myDevices.length,
                 itemBuilder: (context, index) {
                   return Padding(
@@ -130,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 },
-              )),
+              ),
             ],
           ),
         ),

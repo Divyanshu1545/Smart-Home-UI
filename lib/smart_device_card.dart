@@ -18,6 +18,7 @@ class SmartDeviceBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 300,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24),
         color: powerOn ? Colors.grey[900] : Color.fromARGB(44, 164, 167, 189),
@@ -33,7 +34,7 @@ class SmartDeviceBox extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20),
               child: Image.asset(
                 iconPath,
-                height: 65,
+                height: 50,
                 color: powerOn ? Colors.white : Colors.grey.shade700,
               ),
             ),
