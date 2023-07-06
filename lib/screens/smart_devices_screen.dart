@@ -1,4 +1,4 @@
-import 'package:assignment/smart_device_tile.dart';
+import 'package:assignment/widgets/smart_device_tile.dart';
 import 'package:flutter/material.dart';
 
 class SmartDevicesScreen extends StatefulWidget {
@@ -73,7 +73,7 @@ class _SmartDevicesScreenState extends State<SmartDevicesScreen> {
                     Text(
                       "Devices",
                       style:
-                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 32, fontWeight: FontWeight.w800),
                     ),
                   ],
                 ),
@@ -84,7 +84,7 @@ class _SmartDevicesScreenState extends State<SmartDevicesScreen> {
                   "Connected",
                   style: TextStyle(
                       fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w800,
                       color: Colors.grey[400]),
                 ),
                 const SizedBox(height: 50),

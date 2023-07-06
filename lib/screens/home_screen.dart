@@ -1,5 +1,5 @@
 import 'package:assignment/screens/smart_devices_screen.dart';
-import 'package:assignment/smart_device_card.dart';
+import 'package:assignment/widgets/smart_device_card.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Text("Divyanshu Darolia",
                                     style: TextStyle(
                                       fontSize: 18,
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.w800,
                                     ))
                               ],
                             ),
@@ -94,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     const Text(
                       "Smart Devices",
                       style:
-                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
                     ),
                     IconButton(
                         onPressed: () {

@@ -75,7 +75,7 @@ class SmartDeviceTile extends StatelessWidget {
                                   Text(
                                     connections.toString(),
                                     style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                                      fontWeight: FontWeight.w800,
                                       fontSize: 24,
                                       color: !isConnected
                                           ? Colors.black
@@ -94,7 +94,7 @@ class SmartDeviceTile extends StatelessWidget {
                     Text(
                       isConnected ? "Connected" : "Not Connected",
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w800,
                           fontSize: 15,
                           color: Colors.grey[500]),
                     ),
@@ -104,7 +104,7 @@ class SmartDeviceTile extends StatelessWidget {
                     Text(
                       deviceName,
                       style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w800,
                         fontSize: 18,
                       ),
                     )
