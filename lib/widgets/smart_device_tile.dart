@@ -20,14 +20,14 @@ class SmartDeviceTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        height: 150, //Column for elements and line
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
+    return Container(
+      //Column for elements and line
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
@@ -35,13 +35,13 @@ class SmartDeviceTile extends StatelessWidget {
                   children: [
                     Container(
                       width: 80,
-                      height: 120,
+                      height: 110,
                       decoration: BoxDecoration(
                           color: isConnected ? Colors.black : Colors.white,
                           borderRadius: BorderRadius.circular(25)),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 15, horizontal: 15),
+                            vertical: 13, horizontal: 15),
                         child: connections == 0
                             ? Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -107,6 +107,46 @@ class SmartDeviceTile extends StatelessWidget {
                         fontWeight: FontWeight.w800,
                         fontSize: 18,
                       ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 4),
+                          child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Living Room",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
+                                ),
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 4),
+                          child: Container(
+                              decoration: BoxDecoration(
+                                  color: Colors.grey[300],
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Bed Room",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12),
+                                ),
+                              )),
+                        ),
+                      ],
                     )
                   ],
                 ),
@@ -117,12 +157,12 @@ class SmartDeviceTile extends StatelessWidget {
                 )
               ],
             ),
-            Divider(
-              color: Colors.grey[350],
-              thickness: 3,
-            )
-          ],
-        ),
+          ),
+          Divider(
+            color: Colors.grey[350],
+            thickness: 3,
+          )
+        ],
       ),
     );
   }
